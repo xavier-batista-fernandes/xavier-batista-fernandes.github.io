@@ -1,12 +1,12 @@
-import './App.css'
+import StickyCard from "./components/StickyCard.tsx";
 
-function App() {
+const App = () => {
 
   return (
     <>
-      <h1>Xavier Fernandes</h1>
+      <StickyCard></StickyCard>
     </>
   )
 }
 
-export default App
+export default App;
