@@ -1,44 +1,80 @@
-import styled from "styled-components";
+import styled from 'styled-components'
+import { useEffect, useRef } from 'react'
 
-const Container = styled.div`
-    height: 60vmin;
-    width: 50vmin;
-    position: sticky;
-    top: 25vmin;
-    background-color: #e63946;
-    transform: translateX(100vmin);
-`;
+const Card = styled.div`
+    height: 25rem;
+    width: 35vmin;
+    min-width: 250px;
+    background-color: #7ca54e;
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+    right: 200px;
+    transition: opacity 1s ease;
+`
 
-const Page = styled.div<{ $bgColor: string }>`
-    height: 100vh;
-    background-color: ${props => props.$bgColor};
-    border-top: black 5px;
-`;
+const Page = styled.div<{
+    $height?: string
+    $bgColor: string
+    $zIndex?: number
+}>`
+    height: ${(props) => props.$height || '100vh'};
+    background-color: ${(props) => props.$bgColor};
+    z-index: ${(props) => props.$zIndex};
+    position: relative;
+`
 
 const StickyCard = () => {
+    const page1Ref = useRef<HTMLDivElement | null>(null)
+    const page2Ref = useRef<HTMLDivElement | null>(null)
+    const cardRef = useRef<HTMLDivElement | null>(null)
+    const containerRef = useRef<HTMLDivElement>(null)
 
-  return (
-    <>
-      <Page $bgColor={'#f1faee'}>
-        {/*<Flex></Flex>*/}
-        <h1>Xavier Fernandes</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          Nemo
-          enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam
-          quaerat voluptatem.</p>
-      </Page>
-      <Page $bgColor={'#a8dadc'}></Page>
-      <Page $bgColor={'#457b9d'}>
-        <Container></Container>
-      </Page>
-      <Page $bgColor={'#1d3557'}></Page>
-      <Page $bgColor={'#e63946'}></Page>
-    </>
-  )
+    useEffect(() => {
+        const card = cardRef.current
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry)
+                    if (entry.target === containerRef.current) {
+                        console.log(entry.boundingClientRect)
+                        if (entry.isIntersecting) {
+                            card!.style.position = 'fixed'
+                        } else {
+                            card!.style.position = 'absolute'
+                        }
+                    }
+                })
+            },
+            { threshold: 0.5 }
+        )
+
+        if (containerRef.current) observer.observe(containerRef.current)
+
+        return () => {
+            if (containerRef.current) observer.unobserve(containerRef.current)
+        }
+    }, [])
+
+    return (
+        <>
+            <Page $bgColor={'#f1faee'}></Page>
+            <Page $bgColor={'#a8dadc'}></Page>
+            <div
+                ref={containerRef}
+                style={{ height: '200vh', position: 'relative' }}
+            >
+                <Card ref={cardRef}></Card>
+                <Page
+                    ref={page1Ref}
+                    $height={'85vh'}
+                    $bgColor={'#1d3557'}
+                ></Page>
+                <Page ref={page2Ref} $bgColor={'#e63946'} $zIndex={3}></Page>
+                <Page $bgColor={'#457b9d'}></Page>
+            </div>
+        </>
+    )
 }
 
-export default StickyCard;
+export default StickyCard
