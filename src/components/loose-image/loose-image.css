@@ -1,0 +1,23 @@
+#portrait {
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-shadow: 15px 5px 25px 1px;
+}
+
+
+#portrait > img {
+    background-size: cover;
+    width: 110%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

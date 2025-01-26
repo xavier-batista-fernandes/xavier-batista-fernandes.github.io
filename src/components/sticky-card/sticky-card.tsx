@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { useEffect, useRef } from 'react'
+import styled from 'styled-components';
+import { useEffect, useRef } from 'react';
 
 const Card = styled.div`
     height: 25rem;
@@ -11,50 +11,50 @@ const Card = styled.div`
     top: 150px;
     right: 200px;
     transition: opacity 1s ease;
-`
+`;
 
 const Page = styled.div<{
-    $height?: string
-    $bgColor: string
-    $zIndex?: number
+    $height?: string;
+    $bgColor: string;
+    $zIndex?: number;
 }>`
     height: ${(props) => props.$height || '100vh'};
     background-color: ${(props) => props.$bgColor};
     z-index: ${(props) => props.$zIndex};
     position: relative;
-`
+`;
 
 const StickyCard = () => {
-    const page1Ref = useRef<HTMLDivElement | null>(null)
-    const page2Ref = useRef<HTMLDivElement | null>(null)
-    const cardRef = useRef<HTMLDivElement | null>(null)
-    const containerRef = useRef<HTMLDivElement>(null)
+    const page1Ref = useRef<HTMLDivElement | null>(null);
+    const page2Ref = useRef<HTMLDivElement | null>(null);
+    const cardRef = useRef<HTMLDivElement | null>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const card = cardRef.current
+        const card = cardRef.current;
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    console.log(entry)
+                    console.log(entry);
                     if (entry.target === containerRef.current) {
-                        console.log(entry.boundingClientRect)
+                        console.log(entry.boundingClientRect);
                         if (entry.isIntersecting) {
-                            card!.style.position = 'fixed'
+                            card!.style.position = 'fixed';
                         } else {
-                            card!.style.position = 'absolute'
+                            card!.style.position = 'absolute';
                         }
                     }
-                })
+                });
             },
             { threshold: 0.5 }
-        )
+        );
 
-        if (containerRef.current) observer.observe(containerRef.current)
+        if (containerRef.current) observer.observe(containerRef.current);
 
         return () => {
-            if (containerRef.current) observer.unobserve(containerRef.current)
-        }
-    }, [])
+            if (containerRef.current) observer.unobserve(containerRef.current);
+        };
+    }, []);
 
     return (
         <>
@@ -74,7 +74,7 @@ const StickyCard = () => {
                 <Page $bgColor={'#457b9d'}></Page>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default StickyCard
+export default StickyCard;
