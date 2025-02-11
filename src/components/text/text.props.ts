@@ -6,5 +6,6 @@ export interface TextProps {
     fontFamily?: string;
     fontSize?: string;
     fontWeight?: CSSProperties['fontWeight'];
+    margin?: string;
     textAlign?: CSSProperties['textAlign'];
 }

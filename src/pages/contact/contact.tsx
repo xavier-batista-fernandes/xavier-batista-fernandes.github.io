@@ -8,7 +8,7 @@ export const Contact = () => {
 
     return (
         <Container
-            backgroundColor={'#a9d6e5'}
+            backgroundColor={'#a0cad1'}
             height={'100vh'}
             display={'flex'}
             flexDirection={'column'}
@@ -17,7 +17,7 @@ export const Contact = () => {
             gap={'25px'}
         >
             <Text fontSize={'200%'}>I'm offline right now...</Text>
-            <HomeButton width={'50%'} onClick={() => navigate('/', 250)}>
+            <HomeButton secondaryColor={'#669dac'} width={'15rem'} onClick={() => navigate('/', 250)}>
                 Take me back
             </HomeButton>
         </Container>

@@ -8,7 +8,7 @@ export const Experience = () => {
 
     return (
         <Container
-            backgroundColor={'#ffedd8'}
+            backgroundColor={'#a0cad1'}
             height={'100vh'}
             display={'flex'}
             flexDirection={'column'}
@@ -16,8 +16,8 @@ export const Experience = () => {
             alignItems={'center'}
             gap={'25px'}
         >
-            <Text fontSize={'200%'}>My road so far</Text>
-            <HomeButton width={'50%'} onClick={() => navigate('/', 250)}>
+            <Text fontSize={'200%'}>My road so far...</Text>
+            <HomeButton secondaryColor={'#669dac'} width={'15rem'} onClick={() => navigate('/', 250)}>
                 Take me back
             </HomeButton>
         </Container>

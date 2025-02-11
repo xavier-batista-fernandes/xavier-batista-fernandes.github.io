@@ -12,110 +12,107 @@ export const Home = () => {
                 <Container
                     height={'100vh'}
                     width={'100%'}
-                    backgroundColor={'#DDE4B3'}
+                    backgroundColor={'#efefef'}
                     display={'flex'}
                     justifyContent={'center'}
                     flexDirection={'column'}
                     gap={'25px'}
                 >
-                    <Text
-                        color={'black'}
-                        fontFamily={'inherit'}
-                        fontSize={'3em'}
-                    >
+                    <Text color={'black'} fontSize={'2.5rem'} fontWeight={'bold'}>
                         My name is Xavier, and I am a Software Engineer.
                     </Text>
-                    <Text color={'black'} fontSize={'1.25em'}>
+                    <Text color={'black'} fontSize={'1.5em'} fontWeight={'lighter'}>
                         I build things for fun. Sometimes they even work!
                     </Text>
                 </Container>
 
                 {/* Projects Section */}
-                <Container
-                    height={'100vh'}
-                    width={'100%'}
-                    backgroundColor={'#CDD993'}
-                    display={'flex'}
-                >
-                    <div style={{ width: '50%' }}></div>
+                <Container height={'100vh'} width={'100%'} backgroundColor={'#f2e8cf'} display={'flex'}>
+                    <div style={{ width: '35%' }}></div>
                     <Container
-                        width={'50%'}
+                        width={'65%'}
                         display={'flex'}
                         flexDirection={'column'}
                         justifyContent={'center'}
-                        gap={'25px'}
+                        alignItems={'center'}
+                        gap={'10px'}
                     >
+                        <Text fontSize={'220%'} fontWeight={'bold'}>
+                            Some things I’ve built along the way.
+                        </Text>
+                        <Text fontSize={'155%'} fontWeight={'lighter'}>
+                            See what I’ve been up to.
+                        </Text>
                         <HomeButton
-                            margin={'0 25%'}
+                            secondaryColor={'#a7c957'}
+                            margin={'20px 0'}
+                            width={'15rem'}
                             onClick={() => {
                                 navigate('/projects', 250);
                             }}
                         >
                             Projects
                         </HomeButton>
-                        <Text>
-                            Some things I’ve built along the way. See what I’ve
-                            been up to.
-                        </Text>
                     </Container>
                 </Container>
 
                 {/* Experience Section */}
-                <Container
-                    height={'100vh'}
-                    width={'100%'}
-                    backgroundColor={'#BAD175'}
-                    display={'flex'}
-                >
+                <Container height={'100vh'} width={'100%'} backgroundColor={'#CDD993'} display={'flex'}>
                     <Container
-                        width={'50%'}
+                        width={'65%'}
                         display={'flex'}
                         flexDirection={'column'}
                         justifyContent={'center'}
-                        gap={'25px'}
+                        alignItems={'center'}
+                        gap={'10px'}
                     >
+                        <Text fontSize={'220%'} fontWeight={'bold'}>
+                            A look back at my coding journey.
+                        </Text>
+                        <Text fontSize={'155%'} fontWeight={'lighter'}>
+                            Where I started, what I’ve built, and how I got here.
+                        </Text>
                         <HomeButton
-                            margin={'0 25%'}
+                            secondaryColor={'#e07a5f'}
+                            margin={'20px 0'}
+                            width={'15rem'}
                             onClick={() => {
                                 navigate('/experience', 250);
                             }}
                         >
                             Experience
                         </HomeButton>
-                        <Text>
-                            A look back at my coding journey. — where I started,
-                            what I’ve built, and how I got here.
-                        </Text>
                     </Container>
-                    <div style={{ width: '50%' }}></div>
+                    <div style={{ width: '35%' }}></div>
                 </Container>
 
                 {/* Contact Section */}
-                <Container
-                    height={'100vh'}
-                    width={'100%'}
-                    backgroundColor={'#adc178'}
-                    display={'flex'}
-                >
-                    <div style={{ width: '50%' }}></div>
+                <Container height={'100vh'} width={'100%'} backgroundColor={'#f2e8cf'} display={'flex'}>
+                    <div style={{ width: '35%' }}></div>
                     <Container
-                        width={'50%'}
+                        width={'65%'}
                         display={'flex'}
                         flexDirection={'column'}
                         justifyContent={'center'}
-                        gap={'25px'}
+                        alignItems={'center'}
+                        gap={'10px'}
                     >
+                        <Text fontSize={'220%'} fontWeight={'bold'}>
+                            Got an idea or just want to say hello?
+                        </Text>
+                        <Text fontSize={'155%'} fontWeight={'lighter'}>
+                            I'd love to hear from you!
+                        </Text>
                         <HomeButton
-                            margin={'0 25%'}
+                            secondaryColor={'#669dac'}
+                            margin={'20px 0'}
+                            width={'15rem'}
                             onClick={() => {
                                 navigate('/contact', 250);
                             }}
                         >
                             Contact
                         </HomeButton>
-                        <Text>
-                            Got a question, an idea, or just want to say hello?
-                        </Text>
                     </Container>
                 </Container>
             </div>

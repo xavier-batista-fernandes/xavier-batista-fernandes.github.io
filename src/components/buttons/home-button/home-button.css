@@ -1,15 +1,13 @@
 :root {
-    --primary-color: #e9ecef;
-    --secondary-color: #B8DEDC;
+    --primary-color: '';
+    --secondary-color: '';
 }
 
 button {
-    min-width: 20vw;
     background: linear-gradient(to top, var(--primary-color) 50%, var(--secondary-color) 50%) bottom;
     background-size: 100% 200%;
     border: none;
     cursor: pointer;
-    font-size: 150%;
     font-family: inherit;
     padding: 15px 30px;
     position: relative;

@@ -8,11 +8,8 @@ export const Text: React.FC<TextProps> = ({
     fontFamily = 'inherit',
     fontSize,
     fontWeight,
+    margin = '0',
     textAlign = 'center',
 }) => {
-    return (
-        <p style={{ color, fontFamily, fontSize, fontWeight, textAlign }}>
-            {children}
-        </p>
-    );
+    return <p style={{ color, fontFamily, fontSize, fontWeight, margin, textAlign }}>{children}</p>;
 };
