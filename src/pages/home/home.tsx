@@ -1,11 +1,11 @@
 import './home.css';
 import { Container } from '../../components/container/container.tsx';
 import { HomeButton } from '../../components/buttons/home-button/home-button.tsx';
-import { useNavigate } from 'react-router-dom';
 import { Text } from '../../components/text/text.tsx';
+import { useNavigateWithTimeout } from '../../hooks/useNavigateWithTimeout.ts';
 
 export const Home = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigateWithTimeout();
     return (
         <>
             <div className={'page'}>
@@ -48,7 +48,7 @@ export const Home = () => {
                         <HomeButton
                             margin={'0 25%'}
                             onClick={() => {
-                                navigate('/projects');
+                                navigate('/projects', 250);
                             }}
                         >
                             Projects
@@ -77,7 +77,7 @@ export const Home = () => {
                         <HomeButton
                             margin={'0 25%'}
                             onClick={() => {
-                                navigate('/experience');
+                                navigate('/experience', 250);
                             }}
                         >
                             Experience
@@ -94,7 +94,7 @@ export const Home = () => {
                 <Container
                     height={'100vh'}
                     width={'100%'}
-                    backgroundColor={'rgba(211,237,132,0.6)'}
+                    backgroundColor={'#adc178'}
                     display={'flex'}
                 >
                     <div style={{ width: '50%' }}></div>
@@ -108,7 +108,7 @@ export const Home = () => {
                         <HomeButton
                             margin={'0 25%'}
                             onClick={() => {
-                                navigate('/contact');
+                                navigate('/contact', 250);
                             }}
                         >
                             Contact

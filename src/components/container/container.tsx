@@ -10,6 +10,7 @@ export const Container: React.FC<ContainerProps> = ({
     backgroundColor,
     display,
     justifyContent,
+    alignItems,
     flexDirection,
     gap,
 }) => {
@@ -22,6 +23,7 @@ export const Container: React.FC<ContainerProps> = ({
                 backgroundColor,
                 display,
                 justifyContent,
+                alignItems,
                 flexDirection,
                 gap,
             }}

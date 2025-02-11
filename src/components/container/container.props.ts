@@ -8,6 +8,7 @@ export interface ContainerProps {
     backgroundColor?: string;
     display?: CSSProperties['display'];
     justifyContent?: CSSProperties['justifyContent'];
+    alignItems?: CSSProperties['alignItems'];
     flexDirection?: CSSProperties['flexDirection'];
     gap?: string;
 }
