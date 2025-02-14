@@ -65,7 +65,7 @@ export const Home = () => {
                     gap={'10px'}
                 >
                     <img
-                        src="/src/assets/images/projects.svg"
+                        src="/assets/images/projects.svg"
                         alt="lab"
                         width={'30rem'}
                         style={{ minWidth: '300px' }}
@@ -113,7 +113,7 @@ export const Home = () => {
                     gap={'10px'}
                 >
                     <img
-                        src="/src/assets/images/book.svg"
+                        src="/assets/images/book.svg"
                         alt="lab"
                         width={'30rem'}
                         style={{ minWidth: '300px' }}
@@ -162,7 +162,7 @@ export const Home = () => {
                     gap={'10px'}
                 >
                     <img
-                        src="/src/assets/images/bottle.svg"
+                        src="/assets/images/bottle.svg"
                         alt="lab"
                         width={'30rem'}
                         style={{ minWidth: '300px' }}

@@ -3,14 +3,13 @@ import { Text } from '../../components/text/text.tsx';
 import { HomeButton } from '../../components/buttons/home-button/home-button.tsx';
 import { Container } from '../../components/container/container.tsx';
 import { useNavigateWithTimeout } from '../../hooks/useNavigateWithTimeout.ts';
-import { Blocks } from '../../components/animations/blocks/blocks.tsx';
 
 export const Projects = () => {
     const navigate = useNavigateWithTimeout();
 
     return (
         <>
-            <Blocks />
+            {/*<Blocks />*/}
             <Container
                 backgroundColor={'#a0cad1'}
                 height={'100vh'}
