@@ -1,0 +1,38 @@
+#container {
+    height: 1000px;
+    width: 1000px;
+    position: relative;
+    background: rgba(53, 88, 112, 0.53);
+}
+
+#block-1 {
+    height: 10%;
+    width: 10%;
+    background: chocolate;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+}
+
+/*#block-2 {*/
+/*    height: 15%;*/
+/*    width: 15%;*/
+/*    top: 10%;*/
+/*    left: 10%;*/
+/*    background: green;*/
+/*    position: absolute;*/
+/*    z-index: 3;*/
+/*    transition: transform 0.5s linear, border-radius 0.5s ease-out, margin 0.5s;*/
+/*    box-sizing: content-box;*/
+/*    margin: 0;*/
+/*}*/
+
+/*#block-2:hover {*/
+/*    margin: 10%;*/
+/*    border-radius: 50%;*/
+/*    transform: rotate(360deg);*/
+/*}*/
+
+/*#block-2:active {*/
+/*}*/

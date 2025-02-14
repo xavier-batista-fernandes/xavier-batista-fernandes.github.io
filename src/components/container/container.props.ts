@@ -4,6 +4,7 @@ export interface ContainerProps {
     children?: React.ReactNode;
     height?: string;
     width?: string;
+    padding?: string;
     margin?: string;
     backgroundColor?: string;
     display?: CSSProperties['display'];

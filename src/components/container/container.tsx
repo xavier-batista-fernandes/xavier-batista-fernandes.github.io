@@ -6,6 +6,7 @@ export const Container: React.FC<ContainerProps> = ({
     children,
     height = '100%',
     width = '100%',
+    padding,
     margin,
     backgroundColor,
     display,
@@ -19,6 +20,7 @@ export const Container: React.FC<ContainerProps> = ({
             style={{
                 height,
                 width,
+                padding,
                 margin,
                 backgroundColor,
                 display,
