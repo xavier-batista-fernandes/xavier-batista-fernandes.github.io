@@ -1,15 +1,38 @@
 import { Container } from '../container/container.tsx';
+import { Text } from '../text/text.tsx';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
+    const [top, setTop] = useState('-10vmin');
+
+    const handleScroll = () => {
+        window.scrollY === 0 ? setTop('-10vmin') : setTop('0');
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Container
             height={'10vmin'}
             position={'fixed'}
-            background={'transparent'}
-            border={''}
+            padding={'0 10%'}
+            backgroundColor={'#ff9b54'}
             zIndex={'500'}
+            display={'flex'}
+            justifyContent={'start'}
+            alignItems={'center'}
+            top={top}
+            transition={'top 0.5s ease-out'}
         >
-            this is the header
+            <Text color={'black'} fontSize={'150%'} fontWeight={'bold'}>
+                This is the header.
+            </Text>
         </Container>
     );
 };

@@ -22,4 +22,5 @@ export interface ContainerProps {
     boxShadow?: CSSProperties['boxShadow'];
     border?: CSSProperties['border'];
     zIndex?: CSSProperties['zIndex'];
+    transition?: CSSProperties['transition'];
 }

@@ -24,6 +24,7 @@ export const Container: React.FC<ContainerProps> = ({
     boxShadow,
     zIndex,
     border,
+    transition,
 }) => {
     const style: React.CSSProperties = {
         height,
@@ -37,6 +38,7 @@ export const Container: React.FC<ContainerProps> = ({
         display,
         boxShadow,
         border,
+        transition,
     };
 
     if (position !== 'static') {
