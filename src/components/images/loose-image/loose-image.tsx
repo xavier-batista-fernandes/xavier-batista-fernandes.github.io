@@ -8,7 +8,7 @@ export const LooseImage = () => {
             const offsetY = (event.clientY / window.innerHeight - 0.5) * 3;
 
             const image: HTMLElement | null =
-                document!.querySelector('#portrait > img');
+                document.querySelector('#portrait > img');
 
             image?.animate(
                 {
