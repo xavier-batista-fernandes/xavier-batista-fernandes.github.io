@@ -2,16 +2,24 @@ import React, { CSSProperties } from 'react';
 
 export interface ContainerProps {
     children?: React.ReactNode;
-    height?: string;
-    width?: string;
+    height?: CSSProperties['height'];
+    width?: CSSProperties['width'];
     position?: CSSProperties['position'];
-    padding?: string;
-    margin?: string;
-    backgroundColor?: string;
+    left?: CSSProperties['left'];
+    right?: CSSProperties['right'];
+    top?: CSSProperties['top'];
+    bottom?: CSSProperties['bottom'];
+    padding?: CSSProperties['padding'];
+    margin?: CSSProperties['margin'];
+    background?: CSSProperties['background'];
+    backgroundColor?: CSSProperties['backgroundColor'];
     overflow?: CSSProperties['overflow'];
     display?: CSSProperties['display'];
     justifyContent?: CSSProperties['justifyContent'];
     alignItems?: CSSProperties['alignItems'];
     flexDirection?: CSSProperties['flexDirection'];
-    gap?: string;
+    gap?: CSSProperties['gap'];
+    boxShadow?: CSSProperties['boxShadow'];
+    border?: CSSProperties['border'];
+    zIndex?: CSSProperties['zIndex'];
 }

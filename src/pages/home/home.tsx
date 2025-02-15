@@ -7,6 +7,7 @@ import { ContactsSection } from './sections/contacts-section.tsx';
 export const Home = () => {
     return (
         <>
+            {/*<Header />*/}
             <HeroSection />
             <ProjectsSection />
             <ExperienceSection />

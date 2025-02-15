@@ -22,15 +22,16 @@ export const HeroSection = () => {
 
     return (
         <Container
-            height={'150vh'}
+            height={'100vh'}
             width={'100%'}
-            backgroundColor={'#efefef'}
+            background={'linear-gradient(to right, #edf6f9 70%, #83c5be 70%)'}
             display={'flex'}
             alignItems={'center'}
+            position={'relative'}
         >
             <Container
                 height={'100vh'}
-                width={'100vw'}
+                width={'60%'}
                 display={'flex'}
                 alignItems={'center'}
                 justifyContent={'center'}
@@ -53,13 +54,17 @@ export const HeroSection = () => {
                 >
                     I build things for fun. Sometimes they even work!
                 </Text>
-                <Container
-                    width={'750px'}
-                    height={'1000px'}
-                    overflow={'hidden'}
-                >
-                    <HoverImage imageUrls={imageUrls} />
-                </Container>
+            </Container>
+            <Container
+                width={'30%'}
+                height={'70%'}
+                overflow={'hidden'}
+                position={'absolute'}
+                top={'15%'}
+                right={'10%'}
+                boxShadow={'#1b263b 25px 25px 50px'} // TODO: make the shadow move with the cursor
+            >
+                <HoverImage imageUrls={imageUrls} />
             </Container>
         </Container>
     );
