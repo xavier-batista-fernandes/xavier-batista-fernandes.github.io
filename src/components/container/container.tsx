@@ -1,8 +1,8 @@
-import React from 'react';
+import { CSSProperties, FC } from 'react';
 import './container.css';
 import { ContainerProps } from './container.props';
 
-export const Container: React.FC<ContainerProps> = ({
+export const Container: FC<ContainerProps> = ({
     children,
     height = '100%',
     width = '100%',
@@ -26,7 +26,7 @@ export const Container: React.FC<ContainerProps> = ({
     border,
     transition,
 }) => {
-    const style: React.CSSProperties = {
+    const style: CSSProperties = {
         height,
         width,
         padding,

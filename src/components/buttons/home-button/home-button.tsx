@@ -1,8 +1,8 @@
 import './home-button.css';
 import { HomeButtonProps } from './home-button.props.ts';
-import React from 'react';
+import { FC } from 'react';
 
-export const HomeButton: React.FC<HomeButtonProps> = ({
+export const HomeButton: FC<HomeButtonProps> = ({
     children,
     primaryColor = '#efefef',
     secondaryColor = '#e6e6e6',
@@ -17,7 +17,10 @@ export const HomeButton: React.FC<HomeButtonProps> = ({
     };
 
     return (
-        <button onClick={onClick} style={{ ...buttonColors, fontSize, width, margin }}>
+        <button
+            onClick={onClick}
+            style={{ ...buttonColors, fontSize, width, margin }}
+        >
             {children}
         </button>
     );

@@ -1,7 +1,7 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export interface ContainerProps {
-    children?: React.ReactNode;
+    children?: ReactNode;
     height?: CSSProperties['height'];
     width?: CSSProperties['width'];
     position?: CSSProperties['position'];

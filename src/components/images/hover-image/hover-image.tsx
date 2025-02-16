@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { HoverImageProps } from './hover-image.props.ts';
+import { FC, useEffect, useState } from 'react';
 
-export const HoverImage: React.FC<HoverImageProps> = ({ imageUrls }) => {
+export const HoverImage: FC<HoverImageProps> = ({ imageUrls }) => {
     const [imageSrc, setImageSrc] = useState(imageUrls[0]);
     let imageIndex = 0;
 

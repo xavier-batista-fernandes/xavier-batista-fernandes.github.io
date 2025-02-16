@@ -1,8 +1,8 @@
 import './image.css';
 import { ImageProps } from './image.props.ts';
-import React from 'react';
+import { FC } from 'react';
 
-export const Image: React.FC<ImageProps> = ({
+export const Image: FC<ImageProps> = ({
     height = '100%',
     width = '100%',
     borderRadius,

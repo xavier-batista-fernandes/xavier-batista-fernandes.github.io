@@ -1,7 +1,7 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 export interface HomeButtonProps {
-    children: React.ReactNode;
+    children: ReactNode;
     primaryColor?: string;
     secondaryColor?: string;
     fontSize?: string;

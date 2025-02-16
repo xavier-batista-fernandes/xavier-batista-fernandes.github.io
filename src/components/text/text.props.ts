@@ -1,7 +1,7 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export interface TextProps {
-    children: React.ReactNode;
+    children: ReactNode;
     color?: string;
     fontFamily?: string;
     fontSize?: string;
