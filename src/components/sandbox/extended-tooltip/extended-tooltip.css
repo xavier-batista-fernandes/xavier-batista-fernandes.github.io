@@ -1,0 +1,27 @@
+p {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+[data-anchor] {
+    display: inline;
+}
+
+[data-popover] {
+    visibility: hidden;
+    width: 25vw;
+    background: #669dac;
+    box-shadow: #16344c 10px 10px 20px;
+    position: absolute;
+    top: -100px;
+    padding: 1rem;
+    transform: translateY(-50%);
+    z-index: 300;
+}
+
+[data-anchor]:hover ~ [data-popover] {
+    visibility: visible;
+}

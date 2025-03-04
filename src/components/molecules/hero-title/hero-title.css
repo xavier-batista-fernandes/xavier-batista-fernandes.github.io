@@ -1,0 +1,9 @@
+.popover {
+    width: clamp(250px, 30vw, 90vw);
+    padding: 1rem;
+    background: #669dac;
+    box-shadow: #16344c 10px 10px 20px;
+    left: -10%;
+    top: 150%;
+}
+

@@ -1,0 +1,15 @@
+.container {
+    display: inline;
+    position: relative;
+}
+
+[data-tooltip-popover] {
+    visibility: hidden;
+    padding: 1rem;
+    position: absolute;
+    z-index: 300;
+}
+
+[data-tooltip-anchor]:hover ~ [data-tooltip-popover] {
+    visibility: visible;
+}
